@@ -7,9 +7,13 @@ async function main() {
         const db = cli.db('teste');
         console.log("conectou :D");
         const colecao = db.collection('exemplos');
-        const result = await colecao.insertOne({name:'Jhon Doe'});
+        const result = await colecao.insertOne({fruta:'chuchu'});
         console.log(`InsertId: ${result.insertedId}`);
-                
+        const cursor = colecao.find({})
+        while(await cursor.hasNext()){
+            let documento = await cursor.next();
+            console.log(documento);
+        }
     } catch(erro) {
         console.log(erro);
     }
