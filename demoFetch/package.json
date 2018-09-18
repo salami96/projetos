@@ -1,0 +1,30 @@
+{
+  "name": "Lab6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./index.ts",
+    "dev": "npm run build:live",
+    "start": "node ./index.js",
+    "prod": "npm run build && npm start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/mongodb": "^3.1.7",
+    "@types/mongoose": "^5.2.12",
+    "@types/node": "^10.9.4",
+    "@types/node-fetch": "^2.1.2",
+    "nodemon": "^1.18.4",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.3"
+  },
+  "dependencies": {
+    "mongoose": "^5.2.14",
+    "node-fetch": "^2.2.0"
+  }
+}
