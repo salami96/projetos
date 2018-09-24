@@ -8,7 +8,6 @@ async function inicializar() {
         console.log('Mongo conectado com sucesso');
 
         app.listen(80, () => console.log("Server Running..."));
-        app.get('/alo',(req,res)=>res.send('alo'));
         
         if (cliente && cliente.connection) {
             cliente.connection.close();
