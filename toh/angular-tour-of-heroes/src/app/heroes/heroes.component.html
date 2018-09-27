@@ -10,6 +10,8 @@
 
 <div *ngIf="selectedHero">
   <h2>{{selectedHero.name | uppercase}}</h2>
-  <input placeholder="digite um nome" [(ngModel)]="selectedHero.name">
+  <label>Nome
+    <input placeholder="digite um nome" [(ngModel)]="selectedHero.name">
+  </label>
   <button (click)="clearSel()">Salvar</button>
 </div>
