@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Hero } from '../models/hero';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,8 +9,8 @@ export class HeroService {
 
   constructor() { }
 
-  getHeroes(): Hero[] {
-    return [
+  getHeroes(): Observable<Hero[]> {
+    return of([
       {id: 1, name: 'Monkey D. Luffy'},
       {id: 2, name: 'Roronoa Zoro'},
       {id: 3, name: 'Nami'},
@@ -19,6 +20,6 @@ export class HeroService {
       {id: 7, name: 'Nico Robin'},
       {id: 8, name: 'Franky'},
       {id: 9, name: 'Brook'}
-    ];
+    ]);
   }
 }
